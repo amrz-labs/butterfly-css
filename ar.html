@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9KESYR7PYM"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/butterflycss.css">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9KESYR7PYM');
+</script>
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WFG2XVDF');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>توثيق butterfly css</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <!-- Link to your external butterfly CSS file -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/attributes.css">
+<script src="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/df.js"></script>
+    <style>
+        /* Base styles for the documentation page layout and theme */
+        body {
+            font-family: 'Cairo', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #263238;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .container {
+            flex-grow: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff0080 0%, #ff00dd 100%);
+            color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+            border-radius: 0 0 35px 35px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            animation: headerFadeIn 1s ease-out;
+        }
+
+        @keyframes headerFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            font-weight: 800;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-top: 10px;
+        }
+
+        #main-content {
+            flex-grow: 1;
+            padding-right: 30px;
+        }
+
+        section {
+            background-color: #fff;
+            padding: 35px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border: 1px solid #e0e0e0;
+            transition: transform 0.3s ease-out;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #ff006f;
+            border-bottom: 3px solid #ff0073;
+            padding-bottom: 12px;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            font-weight: 700;
+            animation: headingSlideIn 0.8s ease-out;
+        }
+
+        @keyframes headingSlideIn {
+            from { opacity: 0; transform: translateX(20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        h3 {
+            color: #f74f8f;
+            margin-top: 35px;
+            margin-bottom: 18px;
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+
+        code {
+            background-color: #e3f2fd;
+            padding: 4px 8px;
+            border-radius: 6px;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.98em;
+            color: #ff0a8d;
+            white-space: nowrap;
+        }
+
+        pre {
+            background-color: #263238;
+            color: #e0f7fa;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-x: auto;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.95em;
+            margin-bottom: 25px;
+            box-shadow: inset 0 0 12px rgba(0,0,0,0.3);
+            line-height: 1.5;
+            direction: ltr;
+            text-align: left;
+        }
+
+        .attribute-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .attribute-item {
+            background-color: #fcfcfc;
+            border: 1px solid #e1f5fe;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .attribute-item:hover {
+            border-color: #90CAF9;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.1);
+        }
+
+        .attribute-item strong {
+            color: #ff00a6;
+            font-size: 1.15em;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .attribute-item p {
+            font-size: 1em;
+            margin: 0;
+        }
+
+        .example-box {
+            width: 100px;
+            height: 100px;
+            background-color: #ff0077;
+            margin: 18px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000000;
+            font-size: 1.2em;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .example-button {
+            margin: 8px;
+            font-size: 0.95em;
+            padding: 0.6em 1.5em;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        /* Sidebar styles */
+        .sidebar {
+            width: 280px;
+            flex-shrink: 0;
+            background-color: #ffffff;
+            padding: 25px;
+            box-shadow: -3px 0 15px rgba(0,0,0,0.07);
+            border-left: 1px solid #e3f2fd;
+            position: sticky;
+            top: 0;
+            align-self: flex-start;
+            height: 100vh;
+            overflow-y: auto;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .sidebar h3 {
+            color: #ff0099;
+            margin-top: 0;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #fc00b5;
+            padding-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 12px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #546E7A;
+            padding: 10px 15px;
+            display: block;
+            border-radius: 10px;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+            font-size: 1.05em;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #ff00845b;
+            color: #b50661;
+            transform: translateX(-5px);
+        }
+
+        .sidebar ul li a.active {
+            background-color: #f700ff;
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(0, 176, 255, 0.3);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            body {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: static;
+                border-left: none;
+                border-bottom: 1px solid #e3f2fd;
+                border-radius: 0;
+            }
+            #main-content {
+                padding-right: 0;
+            }
+        }
+    </style>
+</head>
+<body dblack lwhite>
+    <script src='https://cdn.jotfor.ms/agent/embedjs/01994f5313d77d91922f04e77d847e564051/embed.js'>
+</script>
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFG2XVDF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <aside class="sidebar" dblack lwhite dtwhite tlblack handdrawn>
+        <h3>أقسام التوثيق</h3>
+        <ul>
+          <button btn="rose" dark-btn hover-5 handdrawn>تغيير الوضع</button>
+            <li><a href="#introduction">مقدمة</a></li>
+            <li><a href="#installation">التثبيت</a></li>
+            <li><a href="#layout-utilities">أدوات التخطيط</a></li>
+              <li><a href="#responsive">صندوق متجاوب</a></li>
+                <li><a href="#dark">الوضع الداكن</a></li>
+            <li><a href="#clip-path-shapes">أشكال Clip-Path</a></li>
+            <li><a href="#animations">الحركات الأساسية</a></li>
+            <li><a href="#ball-animations">حركات الكرة العائمة</a></li>
+            <li><a href="#special-effects">تأثيرات خاصة</a></li>
+            <li><a href="#rotate-utilities">أدوات التدوير</a></li>
+            <li><a href="#gradients">التدرجات اللونية</a></li>
+            <li><a href="#components">المكونات</a></li>
+            <li><a href="#background-colors">ألوان الخلفية</a></li>
+            <li><a href="#text-colors">ألوان النص</a></li>
+        </ul>
+    </aside>
+
+    <div id="main-content">
+     
+
+        <main class="container">
+            <section id="introduction" dblack lwhite dtwhite tlblack>
+                <h2>مقدمة</h2>
+                <p>
+                    butterfly css هي طريقة جديدة لبناء مواقع الويب التي تحلّق من أول لحظة! عبر الكتابة السريعة المعتمدة على الخصائص (attributes)
+                </p>
+   
+          <video w-70p center src="بطل_كودينج،_وابدأ_ارسم.mp4" h-400 hover-26 controls handdrawn spink b-pink></video>
+                <p>
+                    يوفر هذا التوثيق دليلًا شاملًا لجميع الخصائص المتاحة، من التثبيت إلى الأوصاف التفصيلية والأمثلة.
+                    يمكنك مشاهدة عرض توضيحي للوضع الداكن وتأثير عيد الميلاد هنا.
+                </p>
+            </section>
+
+            <section  id="installation" dblack lwhite dtwhite tlblack>
+                <h2>التثبيت</h2>
+                <p>لاستخدام butterfly CSS، ما عليك سوى إضافة الوسوم التالية داخل قسم <code>&lt;head&gt;</code> في مستند HTML الخاص بك. ملف iv.css مخصص للحركات والميزات الأساسية، وiv.js للتعامل مع الارتفاع والعرض والهوامش والحشوة، أما dark.js فهو مخصص للوضع الداكن فقط.</p>
+                <pre>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/butterflycss.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/df.js"&gt;&lt;/script&gt;
+                    &lt;script src="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/vf.js"&gt;&lt;/script&gt;
+                </pre>
+                
+                <p>
+                    على سبيل المثال، لتحويل أي عنصر إلى فراشة:
+                    <pre>
+                        &lt;div butterfly='fly' &gt;&lt;/div&gt;
+                    </pre>
+                    ولإنشاء زر:
+                    <pre>&lt;button btn='purple' handdrawn&gt;...&lt;/button&gt;</pre>
+                </p>
+                <img src="unnamed (2).png" center w-90p h-400 handdrawn spink >
+            </section>
+
+            <section id="responsive" dblack lwhite dtwhite tlblack>
+                <h2>الصندوق المتجاوب</h2>
+                
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخاصية `responsive`</strong>
+                        <p>استخدمها على أي عنصر أب لتحويله إلى صندوق flex متجاوب (ملاحظة: استخدمها فقط إذا كانت العناصر الأبناء من نوع div فقط)</p>
+                        <pre>&lt;div responsive&gt;   &lt;/div&gt;</pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="animations" dblack lwhite dtwhite tlblack>
+                <h2>الحركات الأساسية</h2>
+                <p>هذه الخصائص تُطبّق حركات مستمرة متنوعة على العناصر. وهي تأثيرات حركية للأغراض العامة.</p>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخاصية `spin`</strong>
+                        <p>تدوير العنصر 360 درجة بشكل مستمر.</p>
+                        <pre>&lt;div spin&gt;&lt;/div&gt;</pre>
+                     <h1 style="font-size: 150px;" spin>🌍</h1>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `bounce`</strong>
+                        <p>تجعل العنصر يرتد رأسيًا.</p>
+                        <pre>&lt;div bounce&gt;&lt;/div&gt;</pre>
+                         <h1 style="font-size: 150px;" bounce columns>⚽</h1> <hr>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `pulse`</strong>
+                        <p>تجعل العنصر يكبر قليلًا ثم يتلاشى ويعود.</p>
+                        <pre>&lt;div pulse&gt;&lt;/div&gt;</pre>
+                      <h1 style="font-size: 150px;" center pulse>💗</h1>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `swing`</strong>
+                        <p>تجعل العنصر يتأرجح من جانب لآخر.</p>
+                        <pre>&lt;div swing&gt;&lt;/div&gt;</pre>
+                          <h1 style="font-size: 150px;" swing center>🧹</h1>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `flip`</strong>
+                        <p>تقلب العنصر أفقيًا.</p>
+                        <pre>&lt;div flip&gt;&lt;/div&gt;</pre>
+                         <h1 style="font-size: 150px;" flip center>🃏</h1>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `shake`</strong>
+                        <p>تجعل العنصر يهتز أفقيًا.</p>
+                        <pre>&lt;div shake&gt;&lt;/div&gt;</pre>
+                           <h1 style="font-size: 150px;" shake center>😵‍💫</h1>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `grow`</strong>
+                        <p>تجعل العنصر يكبر ويصغر باستمرار.</p>
+                        <pre>&lt;div grow&gt;&lt;/div&gt;</pre>
+                           <h1 style="font-size: 150px;" grow center>🐣</h1>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `shrink`</strong>
+                        <p>تجعل العنصر يصغر ويكبر باستمرار.</p>
+                        <pre>&lt;div shrink&gt;&lt;/div&gt;</pre>
+                         <h1 style="font-size: 150px;" shrink center>🛰️</h1>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `slide-x`</strong>
+                        <p>تحرك العنصر أفقيًا يمينًا ويسارًا.</p>
+                        <pre>&lt;div slide-x&gt;&lt;/div&gt;</pre>
+                          <h1 style="font-size: 150px;" slide-x center>🛒</h1>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `slide-y`</strong>
+                        <p>تحرك العنصر رأسيًا لأعلى ولأسفل.</p>
+                        <pre>&lt;div slide-y&gt;&lt;/div&gt;</pre>
+                          <h1 style="font-size: 150px;" slide-y center>🎈</h1>
+                    </div>
+                </div>
+            </section>
+
+          
+<section id="dark" dblack lwhite dtwhite tlblack>
+                <h2>الوضع الداكن</h2>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخاصية `d{color}/lwhite` مثل `dpurple`</strong>
+                        <p>تضبط الخلفية على اللون البنفسجي الداكن عند تفعيل 'dark-btn'، واللون البنفسجي الفاتح في وضع النهار.</p>
+                        <pre>&lt;div  dpurple lpurple&gt; &lt;/div&gt;</pre>
+                      
+                    <div class="attribute-item">
+                        <strong>الخاصية `tl{color}/dt{color}`</strong>
+                        <p>لتحديد لون النص في الوضع الداكن والفاتح.</p>
+                        <pre>&lt;p dtwhite tlblue&gt;&lt;/p&gt;
+                            
+                            &lt;button dark-btn btn='black' &gt;&lt;/button&gt;
+                        </pre>
+                    </div>
+          
+                    <div class="attribute-item">
+                        <strong>الخاصية `tl{color}/dt{color}`</strong>
+                        <p>لتحديد لون النص في الوضع الداكن والفاتح.</p>
+                        <pre>&lt;p dtwhite tlblue&gt;&lt;/p&gt;
+                            
+                            &lt;button dark-btn btn='black' &gt;&lt;/button&gt;
+                        </pre>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>تخصيص الوضع الداكن باستخدام JavaScript</strong>
+                        <pre>  document.addEventListener("darkModeApplied", (mode) => {
+    if (mode.detail.dark) {
+        console.log("Dark mode is active");
+        // custom dark mode logic
+    } else {
+        console.log("Light mode is active");
+        // custom light mode logic
+    }
+});</pre>
+                    </div>
+            </section>
+
+            <section id="ball-animations" dblack lwhite dtwhite tlblack>
+                <h2>حركات الكرة العائمة</h2>
+                <p>هذه الخصائص تُنشئ كرات متوهجة ومتحركة تطفو عبر العنصر باستخدام الـ pseudo-element ‏`::before`. ينبغي أن يحتوي العنصر الأب على `position: relative` و`overflow: hidden` للحصول على أفضل النتائج.</p>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخاصية `ball-move-1`</strong>
+                        <p>حركة كرة متوهجة بمسار وسرعة محددين.</p>
+                        <pre>&lt;div style="..." ball-move-1&gt;&lt;/div&gt;</pre>
+                        <div style="position: relative; overflow: hidden; height: 150px; width: 100%; border: 1px solid #ddd; border-radius: 10px; background-color: #f0f8ff;" ball-move-1>
+                            <p style="text-align: center; color: #666; margin-top: 50px;">كرة 1</p>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `ball-move-2`</strong>
+                        <p>حركة كرة متوهجة بمسار وسرعة مختلفين.</p>
+                        <pre>&lt;div style="..." ball-move-2&gt;&lt;/div&gt;</pre>
+                        <div style="position: relative; overflow: hidden; height: 150px; width: 100%; border: 1px solid #ddd; border-radius: 10px; background-color: #f0f8ff;" ball-move-2>
+                             <p style="text-align: center; color: #666; margin-top: 50px;">كرة 2</p>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `ball-move-3`</strong>
+                        <p>حركة كرة متوهجة أكبر حجمًا.</p>
+                        <pre>&lt;div style="..." ball-move-3&gt;&lt;/div&gt;</pre>
+                        <div style="position: relative; overflow: hidden; height: 150px; width: 100%; border: 1px solid #ddd; border-radius: 10px; background-color: #f0f8ff;" ball-move-3>
+                            <p style="text-align: center; color: #666; margin-top: 50px;">كرة 3</p>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `ball-move-4`</strong>
+                        <p>حركة كرة متوهجة أسرع وأصغر حجمًا.</p>
+                        <pre>&lt;div style="..." ball-move-4&gt;&lt;/div&gt;</pre>
+                        <div style="position: relative; overflow: hidden; height: 150px; width: 100%; border: 1px solid #ddd; border-radius: 10px; background-color: #f0f8ff;" ball-move-4>
+                            <p style="text-align: center; color: #666; margin-top: 50px;">كرة 4</p>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `ball-move-5`</strong>
+                        <p>حركة كرة متوهجة كبيرة جدًا وبطيئة جدًا.</p>
+                        <pre>&lt;div style="..." ball-move-5&gt;&lt;/div&gt;</pre>
+                        <div style="position: relative; overflow: hidden; height: 150px; width: 100%; border: 1px solid #ddd; border-radius: 10px; background-color: #f0f8ff;" ball-move-5>
+                            <p style="text-align: center; color: #666; margin-top: 50px;">كرة 5</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="special-effects" dblack lwhite dtwhite tlblack>
+                <h2>التأثيرات الخاصة</h2>
+                <p>هذه الخصائص تُطبّق تأثيرات بصرية فريدة على العناصر، وكثيرًا ما تستخدم pseudo-elements أو فلاتر SVG.</p>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخاصية `birthday-paper`</strong>
+                        <p>تُنشئ حركة أوراق تتساقط كالقصاصات الملونة (confetti) فوق العنصر. يجب أن يحتوي العنصر الأب على `position: relative` و`overflow: hidden`.</p>
+                        <pre>&lt;div style="..." birthday-paper&gt;&lt;/div&gt;</pre>
+                        <div style="position: relative; overflow: hidden; height: 200px; width: 100%; border: 1px solid #ddd; border-radius: 10px; background-color: #fce4ec; display: flex; align-items: center; justify-content: center; font-size: 1.5em; color: #d81b60;" birthday-paper>
+                            عيد ميلاد سعيد!
+                        </div>
+                    </div>
+                    
+                    <div class="attribute-item">
+                        <strong>الخاصية `handdrawn`</strong>
+                        <p>تمنح العنصر مظهرًا مرسومًا يدويًا أو خشنًا باستخدام فلتر SVG، مع تأثير عند التحويم.</p>
+                        <pre>&lt;div handdrawn&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" handdrawn style="width: 150px; height: 80px; font-size: 1.1em; color: #3d0066; background-color: #fffbe9;">
+                            صندوق مرسوم
+                        </div>
+                    </div>
+                   
+                    <div class="attribute-item">
+                        <strong>الخاصية `blur`</strong>
+                        <p>تُطبّق `filter: blur(2px)` على العنصر.</p>
+                        <pre>&lt;div blur&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" blur style="background-image: url('https://placehold.co/100x100/A0A0A0/FFFFFF?text=Blurred');">ضبابي</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `butterfly='fly'`</strong>
+                        <a href='https://dev.to/butterflycss/the-easiest-way-to-make-butterfly-animation-without-writing-a-single-line-of-css-or-js-mbb'>اطلع على الشرح هنا</a>
+                        <pre>&lt;div style="..." butterfly='fly'&gt;&lt;/div&gt;</pre>
+                        <div style="position: relative; overflow: hidden; height: 150px; width: 100%; border: 1px solid #ddd; border-radius: 10px; background-color: #fce4ec; display: flex; align-items: center; justify-content: center; font-size: 1.5em; color: #d81b60;">
+                            <div h-5 w-5>
+                            <div butterfly="fly">
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="rotate-utilities" dblack lwhite dtwhite tlblack>
+                <h2>أدوات التدوير</h2>
+                <p>تُطبّق زوايا تدوير محددة على العناصر. توفر هذه الخصائص تدويرًا بتدرج درجة واحدة من 0 إلى 360 درجة. كما تتوفر متغيرات متجاوبة.</p>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخصائص `rotate="0"` إلى `rotate="360"`</strong>
+                        <p>تدوير العنصر بالدرجة المحددة (مثلًا `rotate="45"` للتدوير 45 درجة، و`rotate="180"` للتدوير 180 درجة). القيم بالدرجات بدون وحدات في الخاصية نفسها.</p>
+                        <pre>&lt;div rotate="45"&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" rotate="45">45°</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="layout-utilities" dblack lwhite dtwhite tlblack>
+                <h2>أدوات التخطيط</h2>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخاصية `rows`</strong>
+                        <p>تُطبّق `display: flex` مع `flex-direction: row`، وتمركز العناصر أفقيًا ورأسيًا.</p>
+                        <pre>&lt;div rows&gt;...&lt;/div&gt;</pre>
+                        <div flex-row style="background-color: #e0f2f7; padding: 10px; border-radius: 5px;">
+                            <span>عنصر 1</span>
+                            <span>عنصر 2</span>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `columns`</strong>
+                        <p>تُطبّق `display: flex` مع `flex-direction: column`، وتمركز العناصر أفقيًا ورأسيًا.</p>
+                        <pre>&lt;div columns&gt;...&lt;/div&gt;</pre>
+                        <div flex-column style="background-color: #e0f2f7; padding: 10px; border-radius: 5px; min-height: 80px;">
+                            <span>عنصر 1</span>
+                            <span>عنصر 2</span>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `center`</strong>
+                        <p>تمركز العنصر داخل حاوية flex الخاصة به (`align-self: center; justify-self: center;`).</p>
+                        <pre>&lt;div flex-row&gt;&lt;span center&gt;...&lt;/span&gt;&lt;/div&gt;</pre>
+                        <div flex-row style="background-color: #e0f2f7; padding: 10px; border-radius: 5px; min-height: 80px;">
+                            <span center>في المنتصف</span>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `flex-auto`</strong>
+                        <p>تتبدّل بين flex-row وflex-column عندما تكون الشاشة أكبر أو أصغر من 1200px للتخطيط العام لا للبطاقات. مثلًا يمكنك استخدامها إذا أردت نصًا بجانب صورة على الكمبيوتر، ويصبح النص تحت الصورة على الموبايل. لعناصر أو divs متجاوبة راجع قسم الصندوق المتجاوب.</p>
+                        <pre>&lt;div flex-auto&gt; &lt;/div&gt;</pre>
+                    </div>
+                </div>
+            </section>
+
+            <section id="width-height-utilities" dblack lwhite dtwhite tlblack>
+                <h2>أدوات العرض والارتفاع</h2>
+                <p>هذه الخصائص تُتيح لك تحديد عرض وارتفاع ثابتين للعناصر بوحدة rem.</p>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخصائص `w-1` إلى `w-999`</strong>
+                        <p>تضبط عرض العنصر من 1 rem إلى 999 rem. مثلًا `w-100` تضبط العرض على 100rem.</p>
+                        <pre>&lt;div w-150&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" w-150 style="height: 50px;">عرض 150rem</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخصائص `h-1` إلى `h-999`</strong>
+                        <p>تضبط ارتفاع العنصر من 1 rem إلى 999 rem. مثلًا `h-200` تضبط الارتفاع على 200rem.</p>
+                        <pre>&lt;div h-120&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" h-120 style="width: 50px;">ارتفاع 120rem</div>
+                    </div>
+                </div>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>`w-10p` إلى `w-100p` (بضرب 10) وw-full</strong>
+                        <p>تضبط العرض بالنسبة المئوية.</p>
+                        <pre>&lt;div w-80p&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" w-full style="height: 50px;">عرض كامل</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>`h-10p` إلى `h-100p` (بضرب 10)</strong>
+                        <p>تضبط الارتفاع بالنسبة المئوية.</p>
+                        <pre>&lt;div h-90p&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" h-90p style="width: 50px;">ارتفاع 90%</div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="clip-path-shapes" dblack lwhite dtwhite tlblack>
+                <h2>أشكال Clip-Path</h2>
+                <p>هذه الخصائص تُطبّق أشكالًا هندسية متنوعة باستخدام `clip-path`.</p>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخاصية `circle`</strong>
+                        <p>تقصّ العنصر على شكل دائرة مثالية.</p>
+                        <pre>&lt;div circle&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" circle>دائرة</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `triangle`</strong>
+                        <p>تقصّ العنصر على شكل مثلث.</p>
+                        <pre>&lt;div triangle&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" triangle>مثلث</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `ellipse`</strong>
+                        <p>تقصّ العنصر على شكل بيضاوي.</p>
+                        <pre>&lt;div ellipse&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" ellipse>بيضاوي</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `square`</strong>
+                        <p>تجعل العنصر مقصوصًا على شكل مربع (inset 0).</p>
+                        <pre>&lt;div square&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" square>مربع</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `rectangle`</strong>
+                        <p>تقصّ العنصر على شكل مستطيل (مع inset بنسبة 10% أعلى وأسفل).</p>
+                        <pre>&lt;div rectangle&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" rectangle>مستطيل</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `diamond`</strong>
+                        <p>تقصّ العنصر على شكل معيّن.</p>
+                        <pre>&lt;div diamond&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" diamond>معيّن</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `hexagon`</strong>
+                        <p>تقصّ العنصر على شكل سداسي.</p>
+                        <pre>&lt;div hexagon&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" hexagon>سداسي</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `parallelogram`</strong>
+                        <p>تقصّ العنصر على شكل متوازي أضلاع.</p>
+                        <pre>&lt;div parallelogram&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" parallelogram>متوازي</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `star`</strong>
+                        <p>تقصّ العنصر على شكل نجمة.</p>
+                        <pre>&lt;div star&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" star>نجمة</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `trapezoid`</strong>
+                        <p>تقصّ العنصر على شكل شبه منحرف.</p>
+                        <pre>&lt;div trapezoid&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" trapezoid>شبه منحرف</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `home`</strong>
+                        <p>تقصّ العنصر على شكل منزل كلاسيكي.</p>
+                        <pre>&lt;div home&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" home>منزل</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `heart`</strong>
+                        <p>تقصّ العنصر على شكل قلب.</p>
+                        <pre>&lt;div heart&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" heart>قلب</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `x`</strong>
+                        <p>تقصّ العنصر على شكل حرف 'X'.</p>
+                        <pre>&lt;div x&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" x>شكل X</div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `message`</strong>
+                        <p>تقصّ العنصر على شكل فقاعة رسالة مع مؤشر في الأسفل.</p>
+                        <pre>&lt;div message&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" message>رسالة</div>
+                    </div>
+                </div>
+            </section>
+         
+            <section id="gradients" dblack lwhite dtwhite tlblack>
+                <h2>التدرجات اللونية</h2>
+                <p>تُطبّق تدرجات خطية حديثة كألوان خلفية.</p>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخاصية `gradient-1`</strong>
+                        <p>تدرج من #6600FF إلى #FF6FD8.</p>
+                        <pre>&lt;div gradient-1&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" gradient-1></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `gradient-2`</strong>
+                        <p>تدرج من #43e97b إلى #38f9d7.</p>
+                        <pre>&lt;div gradient-2&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" gradient-2></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `gradient-3`</strong>
+                        <p>تدرج من #f7971e إلى #ffd200.</p>
+                        <pre>&lt;div gradient-3&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" gradient-3></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `gradient-4`</strong>
+                        <p>تدرج من #f953c6 إلى #b91d73.</p>
+                        <pre>&lt;div gradient-4&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" gradient-4></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `gradient-5`</strong>
+                        <p>تدرج من #30cfd0 إلى #330867.</p>
+                        <pre>&lt;div gradient-5&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" gradient-5></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `gradient-6`</strong>
+                        <p>تدرج من #5ee7df إلى #b490ca.</p>
+                        <pre>&lt;div gradient-6&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" gradient-6></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `gradient-7`</strong>
+                        <p>تدرج من #ee9ca7 إلى #ffdde1.</p>
+                        <pre>&lt;div gradient-7&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" gradient-7></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `gradient-8`</strong>
+                        <p>تدرج من #f6d365 إلى #fda085.</p>
+                        <pre>&lt;div gradient-8&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" gradient-8></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `gradient-9`</strong>
+                        <p>تدرج من #6600ff إلى #c6e8f8.</p>
+                        <pre>&lt;div gradient-9&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" gradient-9></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `gradient-10`</strong>
+                        <p>تدرج من #ffffff إلى #00c3ff.</p>
+                        <pre>&lt;div gradient-10&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" gradient-10></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="components" dblack lwhite dtwhite tlblack>
+                <h2>المكونات</h2>
+                <h3>البطاقة (Card)</h3>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخاصية `card`</strong>
+                        <p>مكوّن بطاقة منسّق بحشوة وزوايا مستديرة وظل، مع تأثير تحويم خفيف.</p>
+                        <pre>&lt;div card&gt;...&lt;/div&gt;</pre>
+                        <div card style="max-width: none; margin: 10px 0;">
+                            <h4>عنوان البطاقة</h4>
+                            <p>هذا محتوى داخل بطاقة butterfly CSS.</p>
+                        </div>
+                    </div>
+                </div>
+                <h3>الزر (Button)</h3>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخاصية `button`</strong>
+                        <p>زر منسّق بشكل أساسي مع حشوة وزوايا مستديرة وخلفية وتأثيرات تحويم.</p>
+                        <pre>&lt;button button&gt;اضغط هنا&lt;/button&gt;</pre>
+                        <button button class="example-button">اضغط هنا</button>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>خصائص `btn='{color}'`</strong>
+                        <p>أزرار ملونة جاهزة. استبدل `{color}` بأي لون من مجموعة واسعة من الألوان. تأثيرات التحويم مضمّنة.</p>
+                        <pre>&lt;button btn='purple'&gt;Purple&lt;/button&gt;
+&lt;button btn='green'&gt;Green&lt;/button&gt;
+&lt;button btn='rose'&gt;Rose&lt;/button&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap;">
+                            <button btn='purple'>Purple</button>
+                            <button btn='blue'>Blue</button>
+                            <button btn='red'>Red</button>
+                            <button btn='green'>Green</button>
+                            <button btn='yellow'>Yellow</button>
+                            <button btn='orange'>Orange</button>
+                            <button btn='pink'>Pink</button>
+                            <button btn='teal'>Teal</button>
+                            <button btn='cyan'>Cyan</button>
+                            <button btn='indigo'>Indigo</button>
+                            <button btn='deep-purple'>Deep Purple</button>
+                            <button btn='lime'>Lime</button>
+                            <button btn='amber'>Amber</button>
+                            <button btn='deep-orange'>Deep Orange</button>
+                            <button btn='brown'>Brown</button>
+                            <button btn='grey'>Grey</button>
+                            <button btn='blue-grey'>Blue-Grey</button>
+                            <button btn='black'>Black</button>
+                            <button btn='white'>White</button>
+                            <button btn='silver'>Silver</button>
+                            <button btn='gold' class="example-button">Gold</button>
+                            <button btn='navy' class="example-button">Navy</button>
+                            <button btn='aqua' class="example-button">Aqua</button>
+                            <button btn='olive'>Olive</button>
+                            <button btn='maroon'>Maroon</button>
+                            <button btn='violet'>Violet</button>
+                            <button btn='magenta'>Magenta</button>
+                            <button btn='coral'>Coral</button>
+                            <button btn='peach'>Peach</button>
+                            <button btn='mint'>Mint</button>
+                            <button btn='sky'>Sky</button>
+                            <button btn='rose'>Rose</button>
+                            <button btn='plum'>Plum</button>
+                            <button btn='sand'>Sand</button>
+                            <button btn='lemon'>Lemon</button>
+                            <button btn='forest'>Forest</button>
+                            <button btn='sea'>Sea</button>
+                            <button btn='wine'>Wine</button>
+                            <button btn='chocolate'>Chocolate</button>
+                            <button btn='mustard'>Mustard</button>
+                            <button btn='ice' class="example-button">Ice</button>
+                            <button btn='lavender' class="example-button">Lavender</button>
+                            <button btn='crimson' class="example-button">Crimson</button>
+                            <button btn='azure' class="example-button">Azure</button>
+                            <button btn='charcoal' class="example-button">Charcoal</button>
+                            <button btn='beige' class="example-button">Beige</button>
+                            <button btn='apricot' class="example-button">Apricot</button>
+                            <button btn='slate' class="example-button">Slate</button>
+                            <button btn='bronze' class="example-button">Bronze</button>
+                            <button btn='clay' class="example-button">Clay</button>
+                            <button btn='butterfly'>butterfly</button>
+                        </div>
+                        <p>يشمل هذا طيفًا كاملًا من الألوان لخصائص `btn='{color}'`. يرجى الرجوع إلى ملف `float.css` للاطلاع على تعريفات الألوان الدقيقة.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="background-colors" dblack lwhite dtwhite tlblack>
+                <h2>ألوان الخلفية</h2>
+                <p>اضبط ألوان الخلفية باستخدام محددات الخصائص للألوان الأساسية والظلال المختلفة (مثل `red`، `red-500`). تُطبّق هذه الخصائص `!important` للتغلب على الأنماط الأخرى.</p>
+                <h3>الألوان الأساسية</h3>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخاصية `red`</strong>
+                        <p>تضبط الخلفية على اللون الأحمر الزاهي.</p>
+                        <pre>&lt;div red&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" red></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `pink`</strong>
+                        <p>تضبط الخلفية على اللون الوردي الزاهي.</p>
+                        <pre>&lt;div pink&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" pink></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `purple`</strong>
+                        <p>تضبط الخلفية على اللون البنفسجي الغامق.</p>
+                        <pre>&lt;div purple&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" purple></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `deep-purple`</strong>
+                        <p>تضبط الخلفية على بنفسجي أكثر قتامة.</p>
+                        <pre>&lt;div deep-purple&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" deep-purple></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `indigo`</strong>
+                        <p>تضبط الخلفية على اللون النيلي الأزرق.</p>
+                        <pre>&lt;div indigo&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" indigo></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `blue`</strong>
+                        <p>تضبط الخلفية على الأزرق العادي.</p>
+                        <pre>&lt;div blue&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" blue></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `light-blue`</strong>
+                        <p>تضبط الخلفية على الأزرق الفاتح.</p>
+                        <pre>&lt;div light-blue&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" light-blue></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `cyan`</strong>
+                        <p>تضبط الخلفية على اللون السماوي الأزرق.</p>
+                        <pre>&lt;div cyan&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" cyan></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `teal`</strong>
+                        <p>تضبط الخلفية على اللون الزيتي الأخضر.</p>
+                        <pre>&lt;div teal&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" teal></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `green`</strong>
+                        <p>تضبط الخلفية على الأخضر الزاهي.</p>
+                        <pre>&lt;div green&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" green></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `light-green`</strong>
+                        <p>تضبط الخلفية على الأخضر الفاتح.</p>
+                        <pre>&lt;div light-green&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" light-green></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `lime`</strong>
+                        <p>تضبط الخلفية على الأخضر الليموني.</p>
+                        <pre>&lt;div lime&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" lime></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `yellow`</strong>
+                        <p>تضبط الخلفية على الأصفر الذهبي.</p>
+                        <pre>&lt;div yellow&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" yellow></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `amber`</strong>
+                        <p>تضبط الخلفية على اللون الكهرماني الأصفر.</p>
+                        <pre>&lt;div amber&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" amber></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `orange`</strong>
+                        <p>تضبط الخلفية على البرتقالي.</p>
+                        <pre>&lt;div orange&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" orange></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `deep-orange`</strong>
+                        <p>تضبط الخلفية على البرتقالي الغامق.</p>
+                        <pre>&lt;div deep-orange&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" deep-orange></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `brown`</strong>
+                        <p>تضبط الخلفية على البني.</p>
+                        <pre>&lt;div brown&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" brown></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `gray`</strong>
+                        <p>تضبط الخلفية على الرمادي العادي.</p>
+                        <pre>&lt;div gray&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" gray></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `blue-gray`</strong>
+                        <p>تضبط الخلفية على الرمادي المزرق.</p>
+                        <pre>&lt;div blue-gray&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" blue-gray></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `black`</strong>
+                        <p>تضبط الخلفية على الأسود الغامق.</p>
+                        <pre>&lt;div black&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" black></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `white`</strong>
+                        <p>تضبط الخلفية على الأبيض.</p>
+                        <pre>&lt;div white&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" white style="border: 1px solid #ddd;"></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `light`</strong>
+                        <p>تضبط الخلفية على بنفسجي/رمادي فاتح جدًا (`#f8f7ff`).</p>
+                        <pre>&lt;div light&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" light></div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `dark`</strong>
+                        <p>تضبط الخلفية على رمادي/أزرق داكن (`#22223b`).</p>
+                        <pre>&lt;div dark&gt;&lt;/div&gt;</pre>
+                        <div class="example-box" dark></div>
+                    </div>
+                </div>
+
+                <h3>الألوان بالظلال (مثل `red-50` إلى `red-900`)</h3>
+                <p>كل لون رئيسي (أحمر، أزرق، أخضر، أصفر، بنفسجي، رمادي) له 10 ظلال من 50 (الأفتح) إلى 900 (الأغمق).</p>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخصائص `red-50` إلى `red-900`</strong>
+                        <p>ظلال متنوعة من خلفية حمراء.</p>
+                        <pre>&lt;div red-50&gt;&lt;/div&gt;
+&lt;div red-500&gt;&lt;/div&gt;
+&lt;div red-900&gt;&lt;/div&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap; margin-top: 10px;">
+                            <div class="example-box" red-50 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" red-200 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" red-500 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" red-700 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" red-900 style="width: 40px; height: 40px; margin: 5px;"></div>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخصائص `blue-50` إلى `blue-900`</strong>
+                        <p>ظلال متنوعة من خلفية زرقاء.</p>
+                        <pre>&lt;div blue-50&gt;&lt;/div&gt;
+&lt;div blue-500&gt;&lt;/div&gt;
+&lt;div blue-900&gt;&lt;/div&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap; margin-top: 10px;">
+                            <div class="example-box" blue-50 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" blue-200 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" blue-500 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" blue-700 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" blue-900 style="width: 40px; height: 40px; margin: 5px;"></div>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخصائص `green-50` إلى `green-900`</strong>
+                        <p>ظلال متنوعة من خلفية خضراء.</p>
+                        <pre>&lt;div green-50&gt;&lt;/div&gt;
+&lt;div green-500&gt;&lt;/div&gt;
+&lt;div green-900&gt;&lt;/div&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap; margin-top: 10px;">
+                            <div class="example-box" green-50 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" green-200 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" green-500 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" green-700 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" green-900 style="width: 40px; height: 40px; margin: 5px;"></div>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخصائص `yellow-50` إلى `yellow-900`</strong>
+                        <p>ظلال متنوعة من خلفية صفراء.</p>
+                        <pre>&lt;div yellow-50&gt;&lt;/div&gt;
+&lt;div yellow-500&gt;&lt;/div&gt;
+&lt;div yellow-900&gt;&lt;/div&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap; margin-top: 10px;">
+                            <div class="example-box" yellow-50 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" yellow-200 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" yellow-500 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" yellow-700 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" yellow-900 style="width: 40px; height: 40px; margin: 5px;"></div>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخصائص `purple-50` إلى `purple-900`</strong>
+                        <p>ظلال متنوعة من خلفية بنفسجية.</p>
+                        <pre>&lt;div purple-50&gt;&lt;/div&gt;
+&lt;div purple-500&gt;&lt;/div&gt;
+&lt;div purple-900&gt;&lt;/div&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap; margin-top: 10px;">
+                            <div class="example-box" purple-50 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" purple-200 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" purple-500 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" purple-700 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" purple-900 style="width: 40px; height: 40px; margin: 5px;"></div>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخصائص `gray-50` إلى `gray-900`</strong>
+                        <p>ظلال متنوعة من خلفية رمادية.</p>
+                        <pre>&lt;div gray-50&gt;&lt;/div&gt;
+&lt;div gray-500&gt;&lt;/div&gt;
+&lt;div gray-900&gt;&lt;/div&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap; margin-top: 10px;">
+                            <div class="example-box" gray-50 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" gray-200 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" gray-500 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" gray-700 style="width: 40px; height: 40px; margin: 5px;"></div>
+                            <div class="example-box" gray-900 style="width: 40px; height: 40px; margin: 5px;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+   
+            <section id="text-colors" dblack lwhite dtwhite tlblack>
+                <h2>ألوان النص</h2>
+                <p>اضبط ألوان النص باستخدام محددات الخصائص مسبوقة بـ `t` للألوان الأساسية والظلال المختلفة (مثل `tred`، `tred-500`). تُطبّق هذه الخصائص `!important` للتغلب على الأنماط الأخرى.</p>
+                <h3>ألوان النص الأساسية</h3>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخاصية `tred`</strong>
+                        <p>تضبط لون النص على الأحمر الزاهي.</p>
+                        <pre>&lt;span tred&gt;...&lt;/span&gt;</pre>
+                        <p tred>نص أحمر</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tpink`</strong>
+                        <p>تضبط لون النص على الوردي الزاهي.</p>
+                        <pre>&lt;span tpink&gt;...&lt;/span&gt;</pre>
+                        <p tpink>نص وردي</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tpurple`</strong>
+                        <p>تضبط لون النص على البنفسجي الغامق.</p>
+                        <pre>&lt;span tpurple&gt;...&lt;/span&gt;</pre>
+                        <p tpurple>نص بنفسجي</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tdeep-purple`</strong>
+                        <p>تضبط لون النص على بنفسجي أكثر قتامة.</p>
+                        <pre>&lt;span tdeep-purple&gt;...&lt;/span&gt;</pre>
+                        <p tdeep-purple>نص بنفسجي غامق</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tindigo`</strong>
+                        <p>تضبط لون النص على النيلي الأزرق.</p>
+                        <pre>&lt;span tindigo&gt;...&lt;/span&gt;</pre>
+                        <p tindigo>نص نيلي</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tblue`</strong>
+                        <p>تضبط لون النص على الأزرق العادي.</p>
+                        <pre>&lt;span tblue&gt;...&lt;/span&gt;</pre>
+                        <p tblue>نص أزرق</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tlight-blue`</strong>
+                        <p>تضبط لون النص على الأزرق الفاتح.</p>
+                        <pre>&lt;span tlight-blue&gt;...&lt;/span&gt;</pre>
+                        <p tlight-blue>نص أزرق فاتح</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tcyan`</strong>
+                        <p>تضبط لون النص على السماوي الأزرق.</p>
+                        <pre>&lt;span tcyan&gt;...&lt;/span&gt;</pre>
+                        <p tcyan>نص سماوي</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tteal`</strong>
+                        <p>تضبط لون النص على الزيتي الأخضر.</p>
+                        <pre>&lt;span tteal&gt;...&lt;/span&gt;</pre>
+                        <p tteal>نص زيتي</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tgreen`</strong>
+                        <p>تضبط لون النص على الأخضر الزاهي.</p>
+                        <pre>&lt;span tgreen&gt;...&lt;/span&gt;</pre>
+                        <p tgreen>نص أخضر</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tlight-green`</strong>
+                        <p>تضبط لون النص على الأخضر الفاتح.</p>
+                        <pre>&lt;span tlight-green&gt;...&lt;/span&gt;</pre>
+                        <p tlight-green>نص أخضر فاتح</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tlime`</strong>
+                        <p>تضبط لون النص على الأخضر الليموني.</p>
+                        <pre>&lt;span tlime&gt;...&lt;/span&gt;</pre>
+                        <p tlime>نص ليموني</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tyellow`</strong>
+                        <p>تضبط لون النص على الأصفر الذهبي.</p>
+                        <pre>&lt;span tyellow&gt;...&lt;/span&gt;</pre>
+                        <p tyellow>نص أصفر</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tamber`</strong>
+                        <p>تضبط لون النص على الكهرماني الأصفر.</p>
+                        <pre>&lt;span tamber&gt;...&lt;/span&gt;</pre>
+                        <p tamber>نص كهرماني</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `torange`</strong>
+                        <p>تضبط لون النص على البرتقالي.</p>
+                        <pre>&lt;span torange&gt;...&lt;/span&gt;</pre>
+                        <p torange>نص برتقالي</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tdeep-orange`</strong>
+                        <p>تضبط لون النص على البرتقالي الغامق.</p>
+                        <pre>&lt;span tdeep-orange&gt;...&lt;/span&gt;</pre>
+                        <p tdeep-orange>نص برتقالي غامق</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tbrown`</strong>
+                        <p>تضبط لون النص على البني.</p>
+                        <pre>&lt;span tbrown&gt;...&lt;/span&gt;</pre>
+                        <p tbrown>نص بني</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tgray`</strong>
+                        <p>تضبط لون النص على الرمادي العادي.</p>
+                        <pre>&lt;span tgray&gt;...&lt;/span&gt;</pre>
+                        <p tgray>نص رمادي</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tblue-gray`</strong>
+                        <p>تضبط لون النص على الرمادي المزرق.</p>
+                        <pre>&lt;span tblue-gray&gt;...&lt;/span&gt;</pre>
+                        <p tblue-gray>نص رمادي مزرق</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tblack`</strong>
+                        <p>تضبط لون النص على الأسود الغامق.</p>
+                        <pre>&lt;span tblack&gt;...&lt;/span&gt;</pre>
+                        <p tblack>نص أسود</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `twhite`</strong>
+                        <p>تضبط لون النص على الأبيض.</p>
+                        <pre>&lt;span twhite&gt;...&lt;/span&gt;</pre>
+                        <p twhite style="background-color: #263238;">نص أبيض</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tlight`</strong>
+                        <p>تضبط لون النص على بنفسجي/رمادي فاتح جدًا.</p>
+                        <pre>&lt;span tlight&gt;...&lt;/span&gt;</pre>
+                        <p tlight style="background-color: #263238;">نص فاتح</p>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخاصية `tdark`</strong>
+                        <p>تضبط لون النص على رمادي/أزرق داكن.</p>
+                        <pre>&lt;span tdark&gt;...&lt;/span&gt;</pre>
+                        <p tdark>نص داكن</p>
+                    </div>
+                </div>
+
+                <h3>ألوان النص بالظلال (مثل `tred-50` إلى `tred-900`)</h3>
+                <p>كل لون رئيسي (أحمر، أزرق، أخضر، أصفر، بنفسجي، رمادي) له 10 ظلال من 50 (الأفتح) إلى 900 (الأغمق).</p>
+                <div class="attribute-list">
+                    <div class="attribute-item">
+                        <strong>الخصائص `tred-50` إلى `tred-900`</strong>
+                        <p>ظلال متنوعة من النص الأحمر.</p>
+                        <pre>&lt;span tred-50&gt;نص&lt;/span&gt;
+&lt;span tred-500&gt;نص&lt;/span&gt;
+&lt;span tred-900&gt;نص&lt;/span&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap; margin-top: 10px; background-color: #444; padding: 10px; border-radius: 5px;">
+                            <span tred-50 style="margin: 5px;">نص</span>
+                            <span tred-200 style="margin: 5px;">نص</span>
+                            <span tred-500 style="margin: 5px;">نص</span>
+                            <span tred-700 style="margin: 5px;">نص</span>
+                            <span tred-900 style="margin: 5px;">نص</span>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخصائص `tblue-50` إلى `tblue-900`</strong>
+                        <p>ظلال متنوعة من النص الأزرق.</p>
+                        <pre>&lt;span tblue-50&gt;نص&lt;/span&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap; margin-top: 10px; background-color: #444; padding: 10px; border-radius: 5px;">
+                            <span tblue-50 style="margin: 5px;">نص</span>
+                            <span tblue-200 style="margin: 5px;">نص</span>
+                            <span tblue-500 style="margin: 5px;">نص</span>
+                            <span tblue-700 style="margin: 5px;">نص</span>
+                            <span tblue-900 style="margin: 5px;">نص</span>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخصائص `tgreen-50` إلى `tgreen-900`</strong>
+                        <p>ظلال متنوعة من النص الأخضر.</p>
+                        <pre>&lt;span tgreen-50&gt;نص&lt;/span&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap; margin-top: 10px; background-color: #444; padding: 10px; border-radius: 5px;">
+                            <span tgreen-50 style="margin: 5px;">نص</span>
+                            <span tgreen-200 style="margin: 5px;">نص</span>
+                            <span tgreen-500 style="margin: 5px;">نص</span>
+                            <span tgreen-700 style="margin: 5px;">نص</span>
+                            <span tgreen-900 style="margin: 5px;">نص</span>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخصائص `tyellow-50` إلى `tyellow-900`</strong>
+                        <p>ظلال متنوعة من النص الأصفر.</p>
+                        <pre>&lt;span tyellow-50&gt;نص&lt;/span&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap; margin-top: 10px; background-color: #444; padding: 10px; border-radius: 5px;">
+                            <span tyellow-50 style="margin: 5px;">نص</span>
+                            <span tyellow-200 style="margin: 5px;">نص</span>
+                            <span tyellow-500 style="margin: 5px;">نص</span>
+                            <span tyellow-700 style="margin: 5px;">نص</span>
+                            <span tyellow-900 style="margin: 5px;">نص</span>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخصائص `tpurple-50` إلى `tpurple-900`</strong>
+                        <p>ظلال متنوعة من النص البنفسجي.</p>
+                        <pre>&lt;span tpurple-50&gt;نص&lt;/span&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap; margin-top: 10px; background-color: #444; padding: 10px; border-radius: 5px;">
+                            <span tpurple-50 style="margin: 5px;">نص</span>
+                            <span tpurple-200 style="margin: 5px;">نص</span>
+                            <span tpurple-500 style="margin: 5px;">نص</span>
+                            <span tpurple-700 style="margin: 5px;">نص</span>
+                            <span tpurple-900 style="margin: 5px;">نص</span>
+                        </div>
+                    </div>
+                    <div class="attribute-item">
+                        <strong>الخصائص `tgray-50` إلى `tgray-900`</strong>
+                        <p>ظلال متنوعة من النص الرمادي.</p>
+                        <pre>&lt;span tgray-50&gt;نص&lt;/span&gt;</pre>
+                        <div flex-row style="flex-wrap: wrap; margin-top: 10px; background-color: #444; padding: 10px; border-radius: 5px;">
+                            <span tgray-50 style="margin: 5px;">نص</span>
+                            <span tgray-200 style="margin: 5px;">نص</span>
+                            <span tgray-500 style="margin: 5px;">نص</span>
+                            <span tgray-700 style="margin: 5px;">نص</span>
+                            <span tgray-900 style="margin: 5px;">نص</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="spacing" dblack lwhite dtwhite tlblack>
+              <h2>أدوات التباعد</h2>
+
+              <div class="attribute-list">
+                <div class="attribute-item">
+                  <strong>الخصائص `m-x / p-x`</strong>
+                  <p>استخدمها للهامش (margin) والحشوة (padding) بوحدة rem.</p>
+                  <pre>&lt;div m-10&gt;&lt;/div&gt; أو &lt;div p-20&gt;&lt;/div&gt;</pre>
+                </div>
+
+                <div class="attribute-item">
+                  <strong>الخاصية `bg=auto`</strong>
+                  <p>تضبط الخلفية على: توسيط، تغطية كاملة، بدون تكرار.</p>
+                  <pre>&lt;div bg=auto&gt;&lt;/div&gt;</pre>
+                </div>
+
+                <div class="attribute-item">
+                  <strong>الخاصية `s{color}`</strong>
+                  <p>تضيف ظلًا بنفس اللون المحدد.</p>
+                  <pre>&lt;div sred&gt;&lt;/div&gt;</pre>
+                </div>
+
+                <div class="attribute-item">
+                  <strong>الخاصية `shadow`</strong>
+                  <p>تضيف ظلًا رماديًا افتراضيًا.</p>
+                  <pre>&lt;div shadow&gt;&lt;/div&gt;</pre>
+                </div>
+
+                <div class="attribute-item">
+                  <strong>الخاصية `tshadow`</strong>
+                  <p>تُطبّق ظل نص.</p>
+                  <pre>&lt;h1 tshadow&gt;عنوان&lt;/h1&gt;</pre>
+                </div>
+
+                <div class="attribute-item">
+                  <strong>الخصائص `navbar / top / bottom`</strong>
+                  <p>تُستخدم لتحديد موضع شريط التنقل.</p>
+                  <pre>&lt;div navbar top&gt;&lt;/div&gt;</pre>
+                </div>
+
+                <div class="attribute-item">
+                  <strong>`ai-center / ai-end / ai-start` لمحاذاة العناصر (align-items)</strong>
+                </div>
+
+                <div class="attribute-item">
+                  <strong>`jc-start / jc-end / jc-center` لتوزيع المحتوى (justify-content)</strong>
+                </div>
+
+                <div class="attribute-item">
+                  <strong>`ol` — شفافية منخفضة (opacity low)</strong>
+                </div>
+
+                <div class="attribute-item">
+                  <strong>`nof` — بدون تجاوز (overflow hidden للمحورين)</strong>
+                </div>
+
+                <div class="attribute-item">
+                  <strong>`bold` — نص عريض</strong>
+                </div>
+              </div>
+            </section>
+
+        </main>
+
+        <footer style="text-align: center; padding: 20px; color: #777; font-size: 0.9em; margin-top: 30px; background-color: #f0e6fa; border-radius: 15px 15px 0 0;">
+            <p>© 2025 butterfly CSS. بتوثيق من عمرو خالد (مولود 2010).</p>
+        </footer>
+    </div>
+</body>
+<script>
+const attributeLists = document.querySelectorAll('.attribute-list');
+const attributeItems = document.querySelectorAll('.attribute-item');
+
+    attributeLists.forEach(list => {
+            list.setAttribute('dblack', '');
+            list.setAttribute('lwhite', '');
+            list.setAttribute('dtwhite', '');
+            list.setAttribute('tlblack', '');
+        });
+
+        // Loop through all elements with the class 'attribute-item'
+        attributeItems.forEach(item => {
+            item.setAttribute('dblack', '');
+            item.setAttribute('lwhite', '');
+            item.setAttribute('dtwhite', '');
+            item.setAttribute('tlblack', '');
+        });
+        
+</script>
+</html>
