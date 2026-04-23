@@ -276,6 +276,60 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
                 padding-left: 0;
             }
         }
+     
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+#container {
+    display: flex;
+    flex: 1;
+    overflow: hidden; /* لمنع ظهور شريط تمرير خارجي */
+}
+
+#editor-container, #preview-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+}
+
+.label {
+    background: #ecf0f1;
+    padding: 8px 15px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #34495e;
+    border-bottom: 1px solid #bdc3c7;
+}
+
+textarea {
+    flex: 1;
+    padding: 15px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 15px;
+    border: none;
+    background: #1e1e1e;
+    color: #d4d4d4;
+    resize: none;
+    outline: none;
+    line-height: 1.5;
+}
+
+iframe {
+    flex: 1;
+    border: none;
+    background: white;
+}
+
+/* تحسين المظهر على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column;
+    }
+}
     </style>
 </head>
 <body dblack lwhite>
@@ -352,7 +406,22 @@ butterfly css is a new way to build websites that fly out of the box! by attribu
                 <p>
                    
                 </p>
-                <img birthday-paper  src="unnamed (2).png" center w-90p h-400 handdrawn spink hover-26>
+             <div id="container">
+        <!-- منطقة المحرر -->
+        <div id="editor-container">
+            <div class="label">butterground</div>
+            <textarea id="editor" placeholder="اكتب كود Butterfly CSS هنا...">
+<div w-full h-10 ball-move-1>
+    <h1 tpink center monospace>Welcome to Butterfly ground</h1>
+</div></textarea>
+        </div>
+
+        <!-- منطقة المعاينة -->
+        <div id="preview-container">
+            <div class="label">المعاينة المباشرة</div>
+            <iframe id="preview"></iframe>
+        </div>
+    </div>
             </section>
 
             <section id="responsive" dblack lwhite dtwhite tlblack>
@@ -1463,10 +1532,55 @@ const attributeItems = document.querySelectorAll('.attribute-item');
             item.setAttribute('dtwhite', '');
             item.setAttribute('tlblack', '');
         });
-        
-</script>
-</html>
+        const editor = document.getElementById('editor');
+const preview = document.getElementById('preview');
 
+function updatePreview() {
+    const userCode = editor.value;
+
+    // روابط المكتبة (CSS و JS)
+    const libCSS = '<link rel="stylesheet" href="https://butterfly-css.netlify.app/butterflycss.css">';
+    const libJS1 = '<script src="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/df.js"></' + 'script>';
+    const libJS2 = '<script src="https://cdn.jsdelivr.net/gh/AMR2010M/butterfly-css@latest/vf.js"></' + 'script>';
+
+    // بناء محتوى صفحة المعاينة
+    const fullContent = `
+        <!DOCTYPE html>
+        <html lang="ar">
+        <head>
+            <meta charset="UTF-8">
+            ${libCSS}
+            <style>
+                body { 
+                    margin: 0; 
+                    padding: 20px; 
+                    min-height: 100vh;
+                }
+            </style>
+        </head>
+        <body>
+            ${userCode}
+            ${libJS1}
+            ${libJS2}
+        </body>
+        </html>
+    `;
+
+    // حقن المحتوى داخل الـ Iframe
+    const dest = preview.contentDocument || preview.contentWindow.document;
+    dest.open();
+    dest.write(fullContent);
+    dest.close();
+}
+
+// التحديث عند الكتابة
+editor.addEventListener('input', updatePreview);
+
+// التحديث لأول مرة عند تحميل الصفحة
+window.addEventListener('DOMContentLoaded', updatePreview);
+</script>
+
+</html>
 
 
 
